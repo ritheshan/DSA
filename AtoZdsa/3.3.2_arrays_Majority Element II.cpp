@@ -13,6 +13,7 @@ public:
         vector<int> ans;
         for(auto [num , count]:map){
             if(count>nums.size()/3) ans.push_back(num);
+            if(ans.size()==2) break;
         }
 
         return ans;
