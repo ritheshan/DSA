@@ -37,6 +37,13 @@ void merge(long long arr1[], long long arr2[], int n, int m) {
     sort(arr2, arr2 + m);
 }
 // optimal approach using gap like shell sort
+
+void swapIfGreater(long long arr1[], long long arr2[], int ind1, int ind2) {
+    if (arr1[ind1] > arr2[ind2]) {
+        swap(arr1[ind1], arr2[ind2]);
+    }
+}
+
 void merge(long long arr1[], long long arr2[], int n, int m) {
     // len of the imaginary single array:
     int len = n + m;
