@@ -36,3 +36,29 @@ public:
         return ans;
     }
 };
+class Solution {
+public:
+    vector<vector<int>> threeSum(vector<int>& arr) {
+ set<vector<int>> st;
+int n=arr.size();
+    for (int i = 0; i < n; i++) {
+        set<int> hashset;
+        for (int j = i + 1; j < n; j++) {
+            //Calculate the 3rd element:
+            int third = -(arr[i] + arr[j]);
+
+            //Find the element in the set:
+            if (hashset.find(third) != hashset.end()) {
+                vector<int> temp = {arr[i], arr[j], third};
+                sort(temp.begin(), temp.end());
+                st.insert(temp);
+            }
+            hashset.insert(arr[j]);
+        }
+    }
+
+    //store the set in the answer:
+    vector<vector<int>> ans(st.begin(), st.end());
+    return ans;
+     }
+};
