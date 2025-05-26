@@ -5,7 +5,7 @@ public:
     int binarysearch(vector<int>& nums, int low, int high, int target) {
         if (low > high) return -1;
         
-        int mid = (high - low) / 2;  // Prevent overflow
+        int mid = low + (high - low) / 2;  // Prevent overflow
         
         if (nums[mid] == target) return mid;
         if (nums[mid] > target) return binarysearch(nums, low, mid - 1, target);
