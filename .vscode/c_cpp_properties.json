@@ -1,0 +1,13 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${default}",
+                "${workspaceFolder}/AtoZdsa"
+            ],
+            "defines": []
+        }
+    ],
+    "version": 4
+}
